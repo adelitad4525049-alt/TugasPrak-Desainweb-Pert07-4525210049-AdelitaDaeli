@@ -42,12 +42,12 @@ Berikut adalah dokumentasi antarmuka (UI) dari aplikasi pada berbagai ukuran lay
 
 ### 1. Tampilan Desktop
 *Tampilan antarmuka saat diakses melalui layar komputer atau laptop (lebar > 600px/768px):*
-![Tampilan Desktop](img/desktop-view.png)
+![Tampilan Desktop](IMAGES/poto.jpeg)
 
 ### 2. Tampilan Mobile
 *Tampilan antarmuka saat diakses melalui perangkat seluler/smartphone (menyesuaikan secara responsif):*
 
-![Tampilan Mobile](img/mobile-view.png)
+![Tampilan Mobile](IMAGES/potohp.jpeg)
 
 ---
 
