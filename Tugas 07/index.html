@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Kursus</title>
+    <!-- Pastikan nama file CSS dan lokasinya sudah sesuai -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="registration-card">
+            <div class="form-header">
+                <span class="label">PENDAFTARAN</span>
+                <h1>Form Pendaftaran Kursus</h1>
+                <p>Silakan lengkapi data calon peserta di bawah ini untuk integrasi backend.</p>
+            </div>
+
+            <!-- Method POST digunakan agar data sensitif seperti password dikirim via body HTTP request -->
+            <form action="/proses-pendaftaran" method="post">
+                
+                <!-- Tipe Input 1: Text (Nama Lengkap) -->
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input 
+                        type="text" 
+                        id="nama" 
+                        name="nama_lengkap" 
+                        placeholder="Masukkan nama lengkap" 
+                        required>
+                </div>
+
+                <!-- Tipe Input 2: Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="nama@email.com" 
+                        required>
+                </div>
+
+                <!-- Tipe Input 3: Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Masukkan password" 
+                        required>
+                    <small>Gunakan minimal 8 karakter.</small>
+                </div>
+
+                <!-- Tipe Input 4: Number (Nilai) -->
+                <div class="form-group">
+                    <label for="nilai">Nilai Ujian / Seleksi</label>
+                    <input 
+                        type="number" 
+                        id="nilai" 
+                        name="nilai" 
+                        min="0" 
+                        max="100" 
+                        step="0.01"
+                        placeholder="Contoh: 85.50" 
+                        required>
+                </div>
+
+                <!-- Tipe Input 5: Date (Tanggal Lahir) -->
+                <div class="form-group">
+                    <label for="tanggal-lahir">Tanggal Lahir</label>
+                    <input 
+                        type="date" 
+                        id="tanggal-lahir" 
+                        name="tanggal_lahir" 
+                        required>
+                </div>
+
+                <!-- Option Tambahan: Select (Pilihan Kursus) -->
+                <div class="form-group">
+                    <label for="pilihan-kursus">Pilihan Program Kursus</label>
+                    <select id="pilihan-kursus" name="pilihan_kursus" required>
+                        <option value="">-- Pilih Program Kursus --</option>
+                        <option value="web-dev">Web Development</option>
+                        <option value="database-admin">Database Administration</option>
+                        <option value="ui-ux">UI/UX Design</option>
+                        <option value="data-science">Data Science</option>
+                    </select>
+                </div>
+
+                <!-- 3 Jenis Button -->
+                <div class="button-group">
+                    <!-- Button 1: Submit -->
+                    <button type="submit" class="btn btn-primary">Daftar Kursus</button>
+                    <!-- Button 2: Reset -->
+                    <button type="reset" class="btn btn-reset">Reset Form</button>
+                    <!-- Button 3: Button biasa (Kembali / Batal) -->
+                    <button type="button" class="btn btn-secondary">Batal</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+</body>
+</html>
